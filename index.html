@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexLingua</title>
+
+  <!-- Background styling -->
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('glyphs.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Google Sans", sans-serif;
+    }
+
+    df-messenger {
+      --df-messenger-font-color: #ffffff;
+      --df-messenger-chat-background: #1e1e1e;
+      --df-messenger-message-user-background: #4A76E6;
+      --df-messenger-message-bot-background: #999999;
+      --df-messenger-send-icon-color: #ffffff;
+      --df-messenger-input-box-color: #2a2a2a;
+      /* --df-messenger-input-placeholder-color: #999999; */
+      --df-messenger-chat-title-background: #111;
+      --df-messenger-chat-title-font-color: #ffffff;
+      --df-messenger-titlebar-background: #111;
+      --df-messenger-titlebar-font-color: white;
+      --df-messenger-chat-border: 1px solid #444;
+      --df-messenger-input-background: #2a2a2a;
+      --df-messenger-input-font-color: #111;
+      
+      
+      position: relative;
+      width: 800px;
+      height: 700px;
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+
+  <!-- Dialogflow Messenger -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
 </head>
+
 <body>
-    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-    <df-messenger
+  <df-messenger
     project-id="proven-entropy-453411-f3"
     agent-id="bbc8e886-9bf3-4bb6-8461-09ba31b34df8"
     language-code="en"
     max-query-length="-1">
-    <df-messenger-chat
-        chat-title="NexLingua">
-    </df-messenger-chat>
-    </df-messenger>
-    <style>
-    df-messenger {
-        z-index: 999;
-        position: fixed;
-        --df-messenger-font-color: #000;
-        --df-messenger-font-family: Google Sans;
-        --df-messenger-chat-background: #E7EFFE;
-        --df-messenger-message-user-background: #4A76E6;
-        --df-messenger-message-bot-background: #fff;
-        bottom: 0;
-        right: 0;
-        top: 0;
-        width: 100%;
-    }
-    </style>
+    <df-messenger-chat chat-title="NexLingua"></df-messenger-chat>
+  </df-messenger>
 </body>
 </html>
